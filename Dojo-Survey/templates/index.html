@@ -22,37 +22,55 @@
         }
         button[type='submit']{
             margin-left:140px;
+            float:right;
+            max-width:10px;
         }
         input[type="text"]{
             margin:0px 10px;
+        }
+        label{
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <div class="content">
         <form action="/result" method="POST"> 
-            <label for="name">Your name:<input type="text" name='username'> </label><br>
-            <label for="pet-select">Dojo Location</label>
-            <select name="location" id="location">
+            <div class="container">
+                <div class='row'>
+                    <label class = "col-md-3"for="name">Your name:</label>
+                    <input type="text"  class = "col-md-4" id= "name" name='username'>  
+                </div>
+                <div class="row">
+            <label for="pet-select" class = "col-md-3">Dojo Location:</label>
+            <select name="location" id="location" class = "col-md-4">
                 <option value="dallas">Dallas</option>
                 <option value="San antonio">San antonio</option>
                 <option value="New York">New York</option>
                 <option value="Austin">Austin</option>
-            </select><br>
-            <label for="language">Language</label>
-            <select name="language" id="Language">
+            </select>
+        </div>
+            <div class="row">
+            <label for="language" class = "col-md-3">Language:</label>
+            <select name="language" id="Language" class = "col-md-4">
                 <option value="JavaScript">JavaScript</option>
                 <option value="Ruby">Ruby</option>
                 <option value="Java">Java</option>
                 <option value="python">python</option>
             </select>
+        </div>
                     <div class="form-group">
-                        <label for="comment"><h6>Comment:</h6></label>
-                        <textarea class="form-control" rows="4" id="comment" name="com"></textarea>
+                        <div class="row">
+                        <label for="comment" class = "col-md-3"><h6>Comment(optional):</h6></label></div>
+                        <div class="row">
+                            <div class= "col-md-4"></div>
+                        <textarea class="form-control col-md-5" rows="4" id="comment" name="com"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary c ">Submit</button>
                     </div> 
-                    <button type="submit" class="btn btn-primary ">Submit</button>
-            
             </form>
+        </div>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
