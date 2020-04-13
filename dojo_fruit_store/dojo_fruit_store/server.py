@@ -28,10 +28,5 @@ def show_result():
     str=session['str'],
     ra=session['ra'],ap=session['ap'])
 
-
-@app.route('/fruits')         
-def fruits():
-    return render_template("fruits.html")
-
 if __name__=="__main__":   
     app.run(debug=True)    
